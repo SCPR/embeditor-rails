@@ -5,11 +5,11 @@ require "embeditor/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "embeditor"
+  s.name        = "embeditor-rails"
   s.version     = Embeditor::VERSION
   s.authors     = ["Bryan Ricker"]
   s.email       = ["bricker@kpcc.org"]
-  s.homepage    = "https://github.com/SCPR/embeditor"
+  s.homepage    = "https://github.com/SCPR/embeditor-rails"
   s.summary     = "Embeditor plugin for Rails."
   s.description = "Embeditor is a set of client-side adapters for various " \
                   "embed codes. It aims to keep your article bodies clean " \
@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "rails", ">= 3.2.0"
+  s.add_dependency "eco", "~> 1.0.0"
 
   s.add_development_dependency "sqlite3"
 end

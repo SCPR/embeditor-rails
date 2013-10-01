@@ -1,7 +1,7 @@
 class Embeditor.Embed.Adapter
     @TemplatePath = "embed/templates/"
 
-    constructor: (@element) ->
+    constructor: (@element, options={}) ->
         @href = @element.attr('href')
 
 

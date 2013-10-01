@@ -1,8 +1,5 @@
 class Embeditor
-    @placeholderFinder  = "embed-placeholder"
-    @wrapperClass       = "embed-wrapper"
-
-    @embedHandlers =
+    @DefaultAdapters =
         'youtube'       : 'Embedly'
         'vimeo'         : 'Embedly'
         # 'brightcove'    : 'Embedly'
@@ -23,19 +20,19 @@ class Embeditor
         'spotify'       : 'Embedly'
         'other'         : 'Embedly'
 
-    @defaultHandler = 'Embedly'
-    @defaultService = 'other'
+    @DefaultOptions =
+        defaultAdapter      : 'Embedly' # Adapter that gets used when the service isn't recognized
+        defaultService      : 'other'   # Service that gets used when the `data-service` attribute is missing
+        placeholderClass    : "embed-placeholder" # The class that the embed placeholders have
+        wrapperClass        : "embed-wrapper" # The class the embed's wrapper should be given
 
 
-    @defaults =
-        maxheight   : 450
+    constructor: (options={}, adapters={}) ->
+        @options    = _.defaults(options, Embeditor.DefaultOptions)
+        @adapters   = _.defaults(adapters, Embeditor.DefaultAdapters)
 
-
-    constructor: (options={}) ->
-        @options        = _.defaults options, @defaults
-        @placeholders   = []
-
-        @links  = $(@_classify Embeditor.placeholderFinder)
+        @placeholders = []
+        @links = $(@_classify @options.placeholderClass)
 
         @findEmbeds()
 
@@ -53,12 +50,13 @@ class Embeditor
             # be undefined. In this scenario, we want to use the default
             # service as a fallback.
             #
-            # If "service" is present but has no match in the Handlers object,
+            # If "service" is present but has no match in the Adapters object,
             # then we want to use the default handler as a fallback.
-            service = link.data('service') || Embeditor.defaultService
-            handler = Embeditor.embedHandlers[service] || Embeditor.defaultHandler
+            service = link.data('service') || @options.defaultService
+            adapter = @adapters[service] || @options.defaultAdapter
 
-            placeholder = new Embeditor[handler](link)
+            placeholder = new Embeditor[adapter](link, @options)
+
             @placeholders.push(placeholder)
 
 

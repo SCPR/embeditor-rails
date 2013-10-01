@@ -13,6 +13,12 @@ gem 'embeditor'
 ```
 
 
+## Dependencies
+
+Currently, [`underscore.js`](http://underscorejs.org/) is a required dependency.
+I hope to remove this dependency eventually.
+
+
 ## Usage
 
 **Note** Currently Embeditor (the JS library) exists only in this Rails plugin.
