@@ -15,7 +15,12 @@ gem 'embeditor'
 
 ## Usage
 
-Embeditor works by replace `A` tags (eg. `<a href="...">Embed</a>`) with the
+**Note** Currently Embeditor (the JS library) exists only in this Rails plugin.
+Eventually it will be extracted to a pure-JS library and this gem will be a
+simple wrapper around it.
+
+
+Embeditor works by replacing `A` tags (eg. `<a href="...">Embed</a>`) with the
 appropriate embed. There are several adapters included with this engine:
 
 * **Embedly** - Covers several services, such as SoundCloud, Spotify,
