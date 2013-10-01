@@ -1,1 +1,2 @@
-class Embeditor.Embed.FireTracker extends Embeditor.Embed.Placeholder
+class Embeditor.Embed.FireTracker extends Embeditor.Embed.Oembed
+    constructor: (@element) ->

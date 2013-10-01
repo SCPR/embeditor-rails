@@ -1,5 +1,5 @@
-class Embeditor.Embed.CoverItLive extends Embeditor.Embed.Placeholder
-    @template = JST[scpr.Embed.Placeholder.TemplatePath + 'cover_it_live_embed']
+class Embeditor.Embed.CoverItLive extends Embeditor.Embed.Adapter
+    @template = JST[scpr.Embed.Adapter.TemplatePath + 'cover_it_live_embed']
 
     swap: ->
         re          = new RegExp "/altcast_code=([^/]+)/", "gi"

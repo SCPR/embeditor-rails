@@ -1,1 +1,1 @@
-class Embeditor.Embed.RebelMouse extends Embeditor.Embed.Placeholder
+class Embeditor.Embed.RebelMouse extends Embeditor.Embed.Adapter

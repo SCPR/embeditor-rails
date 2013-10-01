@@ -10,14 +10,15 @@ Gem::Specification.new do |s|
   s.authors     = ["Bryan Ricker"]
   s.email       = ["bricker@kpcc.org"]
   s.homepage    = "https://github.com/SCPR/embeditor"
-  s.summary     = "Get those filthy embed codes out of your article bodies."
+  s.summary     = "Embeditor plugin for Rails."
   s.description = "Embeditor is a set of client-side adapters for various " \
                   "embed codes. It aims to keep your article bodies clean " \
-                  "while still allowing you to have rich embeds within them."
+                  "while still allowing you to have rich embeds within them. " \
+                  "This is a Rails plugin for that library."
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  s.add_dependency "rails", "~> 4.0.0"
+  s.add_dependency "rails", ">= 3.2.0"
 
   s.add_development_dependency "sqlite3"
 end

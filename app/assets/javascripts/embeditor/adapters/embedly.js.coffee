@@ -1,4 +1,4 @@
-class Embeditor.Embed.Embedly extends Embeditor.Embed.Placeholder
+class Embeditor.Embed.Embedly extends Embeditor.Embed.Oembed
     # This object should hold any keys that we want to
     # send to the API. Any key not in this object will
     # be ignored as a data attribute.

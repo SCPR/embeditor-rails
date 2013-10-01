@@ -1,6 +1,4 @@
-# Each placeholder should define at least the swap() method, and
-# probably the constructor too.
-class Embeditor.Embed.Placeholder
+class Embeditor.Embed.Adapter
     @TemplatePath = "embed/templates/"
 
     constructor: (@element) ->

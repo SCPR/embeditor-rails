@@ -26,9 +26,17 @@ class Embeditor
     @defaultHandler = 'Embedly'
     @defaultService = 'other'
 
-    constructor: ->
-        @placeholders = []
-        @links = $(@_classify Embeditor.placeholderFinder)
+
+    @defaults =
+        maxheight   : 450
+
+
+    constructor: (options={}) ->
+        @options        = _.defaults options, @defaults
+        @placeholders   = []
+
+        @links  = $(@_classify Embeditor.placeholderFinder)
+
         @findEmbeds()
 
 
