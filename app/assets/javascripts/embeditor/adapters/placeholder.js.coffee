@@ -1,6 +1,6 @@
 # Each placeholder should define at least the swap() method, and
 # probably the constructor too.
-class scpr.Embed.Placeholder
+class Embeditor.Embed.Placeholder
     @TemplatePath = "embed/templates/"
 
     constructor: (@element) ->

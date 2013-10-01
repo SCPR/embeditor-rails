@@ -1,1 +1,1 @@
-class scpr.Embed.DocumentCloud extends scpr.Embed.Placeholder
+class Embeditor.Embed.DocumentCloud extends Embeditor.Embed.Placeholder

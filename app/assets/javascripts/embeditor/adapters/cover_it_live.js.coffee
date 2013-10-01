@@ -1,4 +1,4 @@
-class scpr.Embed.CoverItLive extends scpr.Embed.Placeholder
+class Embeditor.Embed.CoverItLive extends Embeditor.Embed.Placeholder
     @template = JST[scpr.Embed.Placeholder.TemplatePath + 'cover_it_live_embed']
 
     swap: ->

@@ -1,1 +1,1 @@
-class scpr.Embed.FireTracker extends scpr.Embed.Placeholder
+class Embeditor.Embed.FireTracker extends Embeditor.Embed.Placeholder

@@ -1,1 +1,1 @@
-class scpr.Embed.RebelMouse extends scpr.Embed.Placeholder
+class Embeditor.Embed.RebelMouse extends Embeditor.Embed.Placeholder

@@ -1,4 +1,4 @@
-class scpr.Embed.Embedly extends scpr.Embed.Placeholder
+class Embeditor.Embed.Embedly extends Embeditor.Embed.Placeholder
     # This object should hold any keys that we want to
     # send to the API. Any key not in this object will
     # be ignored as a data attribute.
@@ -8,7 +8,7 @@ class scpr.Embed.Embedly extends scpr.Embed.Placeholder
     @embedlyDefaults =
         key         : "0cb3651dde4740db8fcb147850c6b555"
         method      : "before"
-        className   : scpr.Embed.wrapperClass
+        className   : Embeditor.Embed.wrapperClass
         endpoint    : 'oembed'
 
 
