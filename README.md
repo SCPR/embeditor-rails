@@ -41,16 +41,19 @@ occur, and call its `swap()` function to perform the swapping:
 </script>
 ```
 
-Embeditor works by replacing `A` tags (eg. `<a href="...">Embed</a>`) with the
-appropriate embed. There are several adapters included with this engine:
+Embeditor works by replacing `A` tags with a specific class with the
+appropriate embed. The default class is `embed-placeholder`, but that can be
+configured.
+
+There are several adapters included with this engine:
 
 * **Embedly** - Covers several services, such as SoundCloud, Spotify,
   Facebook, Scribd, among others. Unfortunately, Embedly doesn't work perfectly
   all the time.
 * **Cover It Live**
 * **Polldaddy** - Currently only works with embedding polls.
-* **Document Cloud** - Not yet supported.
 * **KPCC's Fire Tracker**
+* **Document Cloud** - Not yet supported.
 * **Rebel Mouse** - Not yet supported.
 
 None of these are included automatically. To install just the ones you need,
@@ -80,6 +83,20 @@ You can also selectively require templates:
 ```
 
 ### Configuration
+
+#### Embeditor
+
+You can configure:
+
+* `defaultAdapter` - The adapter that will be used if no adapter is found for
+  the provided service.
+* `defaultService` - The service that will be used if no service is provided
+  on the placeholder link.
+* `wrapperClass` - The class of the div that will get wrapped around the embed.
+* `placeholderClass` - The class of the `<A>` tags that Embeditor will look for.
+
+
+#### Embeds
 
 Embeditor offers a system of configuration precedence.
 The order of precedence is:
@@ -184,7 +201,7 @@ new Embeditor.Base({
 
 ### oEmbed vs. non-oEmbed
 
-This library isn't necessarily tied to oEmbed, however it does has support for
+This library isn't necessarily tied to oEmbed, however it does have support for
 it. Even for services which support oEmbed, there are static templates which
 are able to render the embed properly just based off of the provided URL.
 This eliminates any oEmbed headaches (Access-Control-Allowed-Origin, for
