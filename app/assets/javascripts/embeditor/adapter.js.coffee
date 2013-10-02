@@ -1,3 +1,6 @@
+# Your Adapter should define:
+# * QueryDefaults - an object of defaults to send as query parameters
+
 class Embeditor.Adapter
     @TemplatePath = "embeditor/templates/"
 
@@ -15,7 +18,7 @@ class Embeditor.Adapter
 
         for key,val of @element.data()
             # Make sure we care about this attribute
-            if Embeditor.Adapters[adapter].QueryDefaults[key]
+            if Embeditor.Adapters[adapter].QueryDefaults?[key]
                 dataOptions[key] = val
 
         dataOptions
