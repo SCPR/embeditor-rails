@@ -48,6 +48,7 @@ appropriate embed. There are several adapters included with this engine:
   Facebook, Scribd, among others. Unfortunately, Embedly doesn't work perfectly
   all the time.
 * **Cover It Live**
+* **Polldaddy**
 * **Document Cloud**
 * **KPCC's Fire Tracker**
 * **Rebel Mouse**
@@ -181,8 +182,25 @@ new Embeditor.Base({
 ```
 
 
+### oEmbed vs. non-oEmbed
+
+This library isn't necessarily tied to oEmbed, however it does has support for
+it. Even for services which support oEmbed, there are static templates which
+are able to render the embed properly just based off of the provided URL.
+This eliminates any oEmbed headaches (Access-Control-Allowed-Origin, for
+example), and also reduces the time it takes for an embed to load.
+
+
+
 ## Extending
 
 You can/should add your own adapters! It's easy, I promise. If you add one
 which you think could be useful to a lot of people, please submit a PR and
 share the wealth!
+
+You can extend your adapter from:
+
+* `Embeditor.Adapter`, which is the base adapter.
+* `Embeditor.Adapters.Oembed`, for oEmbed endpoints.
+* `Embeditor.Adapters.StaticTemplate`, for embeds where the embed code is
+  stored in the `/templates` directory and rendered with JST.
