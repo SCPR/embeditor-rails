@@ -1,4 +1,4 @@
-class Embeditor.Adapters.CoverItLive extends Embeditor.Adapter
+class Embeditor.Adapters.CoverItLive extends Embeditor.Adapters.StaticTemplate
     @Template = JST[Embeditor.Adapter.TemplatePath + 'cover_it_live']
 
     @QueryDefaults =
@@ -6,13 +6,6 @@ class Embeditor.Adapters.CoverItLive extends Embeditor.Adapter
         maxwidth  : 620
 
     @Matcher = new RegExp "/altcast_code=([^/]+)/", "gi"
-
-
-    constructor: (@element, options={}) ->
-        @dataOptions = @_extractData()
-        @queryParams = @_buildParams(@dataOptions, options)
-
-        super
 
 
     swap: ->
