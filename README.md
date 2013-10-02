@@ -48,10 +48,10 @@ appropriate embed. There are several adapters included with this engine:
   Facebook, Scribd, among others. Unfortunately, Embedly doesn't work perfectly
   all the time.
 * **Cover It Live**
-* **Polldaddy**
-* **Document Cloud**
+* **Polldaddy** - Currently only works with embedding polls.
+* **Document Cloud** - Not yet supported.
 * **KPCC's Fire Tracker**
-* **Rebel Mouse**
+* **Rebel Mouse** - Not yet supported.
 
 None of these are included automatically. To install just the ones you need,
 add them to your `application.js` :
