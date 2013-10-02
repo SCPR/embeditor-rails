@@ -10,7 +10,7 @@ window.Embeditor = {
         # 'googlemaps'    : 'Embedly'
         'scribd'        : 'Embedly'
         # 'documentcloud' : 'DocumentCloud'
-        # 'polldaddy'     : 'Embedly'
+        'polldaddy'     : 'Polldaddy'
         'facebook'      : 'Embedly'
         # 'storify'       : 'Embedly'
         'coveritlive'   : 'CoverItLive'
