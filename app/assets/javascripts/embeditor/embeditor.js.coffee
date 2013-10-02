@@ -15,7 +15,7 @@ window.Embeditor = {
         # 'storify'       : 'Embedly'
         'coveritlive'   : 'CoverItLive'
         # 'rebelmouse'    : 'RebelMouse'
-        # 'firetracker'   : 'FireTracker'
+        'firetracker'   : 'FireTracker'
         # 'twitter'       : 'Embedly'
         'instagram'     : 'Embedly'
         'soundcloud'    : 'Embedly'
