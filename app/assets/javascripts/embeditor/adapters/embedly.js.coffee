@@ -1,4 +1,6 @@
-class Embeditor.Adapters.Embedly extends Embeditor.Adapters.Oembed
+# This doesn't inherit from Adapters.Oembed because the Embedly plugin
+# handles most of that stuff on its own.
+class Embeditor.Adapters.Embedly extends Embeditor.Adapter
     # This object should hold any keys that we want to
     # send to the API. Any key not in this object will
     # be ignored as a data attribute.
@@ -11,12 +13,10 @@ class Embeditor.Adapters.Embedly extends Embeditor.Adapters.Oembed
         endpoint    : 'oembed'
         # Key must be specified
 
-    constructor: (@element, options={}) ->
-        @dataOptions = @_extractData()
-        @queryParams = @_buildParams(@dataOptions, options)
 
-        @pluginOptions = _.defaults(options['Embedly']?['plugin'],
-            Embedly.PluginDefaults)
+    constructor: (@element, options={}) ->
+        pluginOpts = options['Embedly']?['plugin'] or {}
+        @pluginOptions = _.defaults(pluginOpts, Embedly.PluginDefaults)
 
         super
 
