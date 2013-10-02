@@ -1,5 +1,7 @@
-class Embeditor
-    @DefaultAdapters =
+window.Embeditor = {
+    Adapters : {}
+
+    DefaultAdapters :
         'youtube'       : 'Embedly'
         'vimeo'         : 'Embedly'
         # 'brightcove'    : 'Embedly'
@@ -20,13 +22,15 @@ class Embeditor
         'spotify'       : 'Embedly'
         'other'         : 'Embedly'
 
-    @DefaultOptions =
+    DefaultOptions :
         defaultAdapter      : 'Embedly' # Adapter that gets used when the service isn't recognized
         defaultService      : 'other'   # Service that gets used when the `data-service` attribute is missing
         placeholderClass    : "embed-placeholder" # The class that the embed placeholders have
         wrapperClass        : "embed-wrapper" # The class the embed's wrapper should be given
+}
 
 
+class Embeditor.Base
     constructor: (options={}, adapters={}) ->
         @options    = _.defaults(options, Embeditor.DefaultOptions)
         @adapters   = _.defaults(adapters, Embeditor.DefaultAdapters)
@@ -53,10 +57,12 @@ class Embeditor
             # If "service" is present but has no match in the Adapters object,
             # then we want to use the default handler as a fallback.
             service = link.data('service') || @options.defaultService
-            adapter = @adapters[service] || @options.defaultAdapter
+            adapterName = @adapters[service] || @options.defaultAdapter
+            adapter = Embeditor.Adapters[adapterName]
 
-            placeholder = new Embeditor[adapter](link, @options)
+            return if not adapter
 
+            placeholder = new adapter(link, @options)
             @placeholders.push(placeholder)
 
 

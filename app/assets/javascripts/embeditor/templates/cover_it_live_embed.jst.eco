@@ -1,4 +1,4 @@
 <div id='cil-root-<%=@event_id%>' class='cil-root'>
-    <span class='cil-config-data' title='{"altcastCode":"<%=@event_id%>","server":"www.coveritlive.com","geometry":{"width":620,"height":550},"configuration":{"newEntryLocation":"bottom","pinsGrowSize":"on","titlePage":"on","skinOverride":"2"}}'>&nbsp;</span>
+    <span class='cil-config-data' title='{"altcastCode":"<%=@event_id%>","server":"www.coveritlive.com","geometry":{"width":<%=@maxwidth%>,"height":<%=@maxheight%>},"configuration":{"newEntryLocation":"bottom","pinsGrowSize":"on","titlePage":"on","skinOverride":"2"}}'>&nbsp;</span>
 </div>
 <script type='text/javascript'>window.cilAsyncInit = function() {cilEmbedManager.init()};(function() {var e = document.createElement('script');e.async = true;var domain = (document.location.protocol == 'http:') ? '//cdnsl.coveritlive.com' : '//cdnslssl.coveritlive.com';e.src = document.location.protocol + domain + '/vw.js?v=' + Math.floor(Math.random()*10000000);e.id = 'cilScript-<%=@event_id%>';document.getElementById('cil-root-<%=@event_id%>').appendChild(e);}());</script>

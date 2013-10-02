@@ -1,4 +1,4 @@
-require 'embeditor/version'
+require 'embeditor-rails/version'
 
 module Embeditor
   module Rails

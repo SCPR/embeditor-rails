@@ -1,12 +1,12 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
-require "embeditor/version"
+require "embeditor-rails/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "embeditor-rails"
-  s.version     = Embeditor::VERSION
+  s.version     = Embeditor::Rails::VERSION
   s.authors     = ["Bryan Ricker"]
   s.email       = ["bricker@kpcc.org"]
   s.homepage    = "https://github.com/SCPR/embeditor-rails"
