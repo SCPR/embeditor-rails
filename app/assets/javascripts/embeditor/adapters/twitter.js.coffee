@@ -1,9 +1,8 @@
 class Embeditor.Adapters.Twitter extends Embeditor.Adapters.StaticTemplate
     @Template = Embeditor.Template('twitter')
 
-    @QueryDefaults =
-        maxheight : 550
-        maxwidth  : 620
+    # Twitter doesn't give a damn about you or your dimensions.
+    @QueryDefaults = {}
 
     # For twitter, we just use the full URL, so no matchers are needed.
     @Matchers = []

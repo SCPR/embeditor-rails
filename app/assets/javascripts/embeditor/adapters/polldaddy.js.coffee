@@ -1,5 +1,5 @@
 class Embeditor.Adapters.Polldaddy extends Embeditor.Adapters.Oembed
-    @Path = "http://polldaddy.com/oembed/"
+    @Path = "http://polldaddy.com/oembed/" # Doesn't work w/o trailing slash...
 
     @QueryDefaults =
         maxheight : 550
