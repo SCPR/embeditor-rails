@@ -5,17 +5,16 @@ class Embeditor.Adapters.StaticTemplate extends Embeditor.Adapter
     # Query parameter defaults
     @QueryDefaults = {}
 
-    # The matcher to extract the info out of the URL.
-    @Matcher = new RegExp "http:\/\/([^/]+)/s/([^/]+)", "gi"
-
-
-    constructor: (@element, options={}) ->
-        @dataOptions = @_extractData()
-        @queryParams = @_buildParams(@dataOptions, options)
-
-        super
+    # The matchers to extract the info out of the URL.
+    @Matchers = []
 
 
     swap: ->
         # Extract the info and render the template
         return
+
+
+    _parseUrl: ->
+        console.log @adapter.Matchers
+        _.find @adapter.Matchers, (matcher) =>
+            matcher.exec(@href)

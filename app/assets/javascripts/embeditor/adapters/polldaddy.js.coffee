@@ -1,18 +1,16 @@
-class Embeditor.Adapters.Polldaddy extends Embeditor.Adapters.StaticTemplate
-    @Template = JST[Embeditor.Adapter.TemplatePath + 'polldaddy']
+class Embeditor.Adapters.Polldaddy extends Embeditor.Adapters.Oembed
+    @Path = "http://polldaddy.com/oembed"
 
     @QueryDefaults =
         maxheight : 550
         maxwidth  : 620
+        format    : 'json'
 
-    @Matcher = new RegExp "http:\/\/([^/]+)/s/([^/]+)", "gi"
 
+    constructor: (@element, options={}) ->
+        super
 
-    swap: ->
-        match       = Polldaddy.Matcher.exec(@href)
-        domain      = match[1]
-        poll_id     = match[2]
-
-        @element.after Polldaddy.Template
-            poll_id   : poll_id,
-            domain    : domain
+        # Work around a polldaddy bug where the oembed endpoint doesn't
+        # probably recognize https URL's given to it.
+        if @href.match(/^https/)
+            @href = @href.replace(/^https/, 'http')

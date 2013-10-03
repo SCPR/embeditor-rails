@@ -22,6 +22,11 @@ window.Embeditor = {
         'spotify'       : 'Embedly'
         'other'         : 'Embedly'
 
+    TemplatePath : 'embeditor/templates/'
+
+    Template : (template) ->
+        JST[@TemplatePath + template]
+
     DefaultOptions :
         defaultAdapter      : 'Embedly' # Adapter that gets used when the service isn't recognized
         defaultService      : 'other'   # Service that gets used when the `data-service` attribute is missing

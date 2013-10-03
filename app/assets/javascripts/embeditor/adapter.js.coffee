@@ -2,10 +2,12 @@
 # * QueryDefaults - an object of defaults to send as query parameters
 
 class Embeditor.Adapter
-    @TemplatePath = "embeditor/templates/"
 
     constructor: (@element, options={}) ->
-        @href = @element.attr('href')
+        @adapter        = Embeditor.Adapters[@constructor.name]
+        @href           = @element.attr('href')
+        @dataOptions    = @_extractData()
+        @queryParams    = @_buildParams(@dataOptions, options)
 
 
     swap: ->
@@ -13,12 +15,11 @@ class Embeditor.Adapter
 
 
     _extractData: ->
-        adapter = @constructor.name
         dataOptions = {}
 
         for key,val of @element.data()
             # Make sure we care about this attribute
-            if Embeditor.Adapters[adapter].QueryDefaults?[key]
+            if @adapter.QueryDefaults?[key]
                 dataOptions[key] = val
 
         dataOptions

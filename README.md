@@ -51,7 +51,7 @@ There are several adapters included with this engine:
   Facebook, Scribd, among others. Unfortunately, Embedly doesn't work perfectly
   all the time.
 * **Cover It Live**
-* **Polldaddy** - Currently only works with embedding polls.
+* **Polldaddy**
 * **KPCC's Fire Tracker**
 * **Document Cloud** - Not yet supported.
 * **Rebel Mouse** - Not yet supported.
