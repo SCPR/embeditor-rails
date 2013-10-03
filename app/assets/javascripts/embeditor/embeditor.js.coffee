@@ -17,7 +17,7 @@ window.Embeditor = {
         # 'rebelmouse'    : 'RebelMouse'
         'firetracker'   : 'FireTracker'
         'twitter'       : 'Twitter'
-        'instagram'     : 'Embedly'
+        'instagram'     : 'Instagram'
         'soundcloud'    : 'Embedly'
         'spotify'       : 'Embedly'
         'other'         : 'Embedly'

@@ -1,0 +1,1 @@
+<iframe src="//instagram.com/p/<%=@photo_id%>/embed/" width="<%=@maxwidth%>" height="<%=@maxheight%>" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
