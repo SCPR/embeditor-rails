@@ -12,7 +12,7 @@ window.Embeditor = {
         # 'documentcloud' : 'DocumentCloud'
         'polldaddy'     : 'Polldaddy'
         'facebook'      : 'Facebook'
-        # 'storify'       : 'Embedly'
+        'storify'       : 'Storify'
         'coveritlive'   : 'CoverItLive'
         # 'rebelmouse'    : 'RebelMouse'
         'firetracker'   : 'FireTracker'

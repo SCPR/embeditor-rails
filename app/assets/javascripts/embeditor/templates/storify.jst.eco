@@ -1,0 +1,1 @@
+<div class="storify"><iframe src="<%=@url%>/embed" width="100%" height=<%=@maxheight%>frameborder=no allowtransparency=true></iframe><script src="<%=@url%>.js"></script></div>
