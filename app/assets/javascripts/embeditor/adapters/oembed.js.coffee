@@ -12,8 +12,5 @@ class Embeditor.Adapters.Oembed extends Embeditor.Adapter
             success: (data, textStatus, jqXHR) =>
                 @element.after(data.html)
 
-            error: (jqXHR, textStatus, errorThrown) ->
-                console.log('[embeditor oembed] error.',textStatus,errorThrown)
-
-            complete: (jqXHR, textStatus) ->
-                console.log('[embeditor oembed] complete.',textStatus)
+            error: (jqXHR, textStatus, errorThrown) =>
+                console.log('[embeditor oembed] error.', jqXHR)
