@@ -10,4 +10,7 @@ class Embeditor.Adapters.Facebook extends Embeditor.Adapters.StaticTemplate
 
 
     swap: ->
-        @embed Facebook.Template(url : @href)
+        @embed Facebook.Template
+            maxheight   : @queryParams.maxheight,
+            maxwidth    : @queryParams.maxwidth,
+            url         : @href
