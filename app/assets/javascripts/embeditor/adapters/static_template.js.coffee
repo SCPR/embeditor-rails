@@ -19,6 +19,9 @@ class Embeditor.Adapters.StaticTemplate extends Embeditor.Adapter
 
 
     _parseUrl: ->
-        console.log @adapter.Matchers
-        _.find @adapter.Matchers, (matcher) =>
-            matcher.exec(@href)
+        match = null
+
+        _.find @adapter.Matchers, (m) =>
+            match = m.exec(@href)
+
+        match

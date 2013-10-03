@@ -14,7 +14,7 @@ class Embeditor.Adapters.Embedly extends Embeditor.Adapter
         # Key must be specified
 
 
-    constructor: (@element, options={}) ->
+    constructor: (@element, @options={}) ->
         pluginOpts = options['Embedly']?['plugin'] or {}
         @pluginOptions = _.defaults(pluginOpts, Embedly.PluginDefaults)
 

@@ -3,7 +3,7 @@
 
 class Embeditor.Adapter
 
-    constructor: (@element, options={}) ->
+    constructor: (@element, @options={}) ->
         @adapter        = Embeditor.Adapters[@constructor.name]
         @href           = @element.attr('href')
         @dataOptions    = @_extractData()
@@ -12,6 +12,12 @@ class Embeditor.Adapter
 
     swap: ->
         return
+
+
+    embed: (html) ->
+        @wrapper = $("<div />", class: @options.wrapperClass)
+        @wrapper.html(html)
+        @element.after @wrapper
 
 
     _extractData: ->

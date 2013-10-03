@@ -10,7 +10,4 @@ class Embeditor.Adapters.Twitter extends Embeditor.Adapters.StaticTemplate
 
 
     swap: ->
-        console.log "hello tweeter"
-        url = @href
-
-        @element.after Twitter.Template(url : url)
+        @embed Twitter.Template(url : @href)

@@ -10,7 +10,7 @@ class Embeditor.Adapters.Oembed extends Embeditor.Adapter
             data        :  _.extend(@queryParams, {url: @href})
 
             success: (data, textStatus, jqXHR) =>
-                @element.after(data.html)
+                @embed data.html
 
             error: (jqXHR, textStatus, errorThrown) =>
                 console.log('[embeditor oembed] error.', jqXHR)

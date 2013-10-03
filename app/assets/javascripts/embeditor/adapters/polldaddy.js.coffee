@@ -7,7 +7,7 @@ class Embeditor.Adapters.Polldaddy extends Embeditor.Adapters.Oembed
         format    : 'json'
 
 
-    constructor: (@element, options={}) ->
+    constructor: (@element, @options={}) ->
         super
 
         # Work around a polldaddy bug where the oembed endpoint doesn't
