@@ -11,6 +11,6 @@ class Embeditor.Adapters.Polldaddy extends Embeditor.Adapters.Oembed
         super
 
         # Work around a polldaddy bug where the oembed endpoint doesn't
-        # probably recognize https URL's given to it.
+        # properly recognize SSL URL's given to it.
         if @href.match(/^https/)
             @href = @href.replace(/^https/, 'http')
