@@ -16,7 +16,7 @@ window.Embeditor = {
         'coveritlive'   : 'CoverItLive'
         # 'rebelmouse'    : 'RebelMouse'
         'firetracker'   : 'FireTracker'
-        # 'twitter'       : 'Embedly'
+        'twitter'       : 'Twitter'
         'instagram'     : 'Embedly'
         'soundcloud'    : 'Embedly'
         'spotify'       : 'Embedly'
