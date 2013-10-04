@@ -2,8 +2,8 @@ class Embeditor.Adapters.CoverItLive extends Embeditor.Adapters.StaticTemplate
     @Template = Embeditor.Template('cover_it_live')
 
     @QueryDefaults =
-        maxheight : 550
         maxwidth  : 620
+        maxheight : 550
 
     @Matchers = [
         new RegExp "/altcast_code=([^/]+)/", "gi"

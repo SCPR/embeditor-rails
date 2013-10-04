@@ -5,8 +5,8 @@ class Embeditor.Adapters.Instagram extends Embeditor.Adapters.StaticTemplate
     @Template = Embeditor.Template('instagram')
 
     @QueryDefaults =
-        maxheight : 710
         maxwidth  : 612
+        maxheight : 710
 
     @Matchers = [
         # http://instagram.com/p/e8hJe6CvTW/
