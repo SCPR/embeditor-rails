@@ -7,7 +7,7 @@ window.Embeditor = {
         # 'brightcove'    : 'Embedly'
         'ustream'       : 'Embedly'
         'vine'          : 'Embedly'
-        # 'googlemaps'    : 'Embedly'
+        'googlemaps'    : 'GoogleMaps'
         'scribd'        : 'Embedly'
         # 'documentcloud' : 'DocumentCloud'
         'polldaddy'     : 'Polldaddy'
