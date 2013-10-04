@@ -1,4 +1,5 @@
 class Embeditor.Adapters.GoogleMaps extends Embeditor.Adapters.StaticTemplate
+    @MapTarget = 'gmap-embed'
     @Template = Embeditor.Template('google_maps')
 
     @QueryDefaults =
@@ -16,29 +17,18 @@ class Embeditor.Adapters.GoogleMaps extends Embeditor.Adapters.StaticTemplate
         match = @_parseUrl()
         return false if not match
 
-        # Load in the Google Maps JS if it hasn't been already
-        if not window.google?.maps
-            $.getScript(
-                'https://maps.googleapis.com/maps/api/js?sensor=false',
-                => @_loadMap(match))
-        else
-            @_loadMap(match)
+        latlng  = match[1].split(',')
+        lat     = parseFloat(latlng[0])
+        lng     = parseFloat(latlng[1])
 
+        mapOpts =
+            center      : new google.maps.LatLng(lat, lng)
+            zoom        : 10
+            mapTypeId   : google.maps.MapTypeId.ROADMAP
 
-    _loadMap: (match) ->
-        $ =>
-            latlng  = match[1].split(',')
-            lat     = parseFloat(latlng[0])
-            lng     = parseFloat(latlng[1])
+        @embed GoogleMaps.Template
+            targetClass     : GoogleMaps.MapTarget
+            maxheight       : @queryParams.maxheight
+            maxwidth        : @queryParams.maxwidth
 
-            mapOpts =
-                center      : new google.maps.LatLng(lat, lng)
-                zoom        : 10
-                mapTypeId   : google.maps.MapTypeId.ROADMAP
-
-            @embed GoogleMaps.Template
-                maxheight   : @queryParams.maxheight
-                maxwidth    : @queryParams.maxwidth
-
-            map = new google.maps.Map($('.gmap-embed', @wrapper)[0], mapOpts)
-            console.log map
+        new google.maps.Map($(".#{GoogleMaps.MapTarget}", @wrapper)[0], mapOpts)

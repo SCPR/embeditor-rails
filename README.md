@@ -199,6 +199,16 @@ new Embeditor.Base({
 ```
 
 
+### Google Maps
+
+If you're using the Google Maps adapter, you'll need to include the Google Maps
+javascript manually in your header:
+
+```html
+<script src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+```
+
+
 ### oEmbed vs. non-oEmbed
 
 This library isn't necessarily tied to oEmbed, however it does have support for
