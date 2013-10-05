@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Bryan Ricker"]
   s.email       = ["bricker@kpcc.org"]
   s.homepage    = "https://github.com/SCPR/embeditor-rails"
-  s.licence     = 'MIT'
+  s.license     = 'MIT'
   s.summary     = "Embeditor plugin for Rails."
   s.description = "Embeditor is a set of client-side adapters for various " \
                   "embed codes. It aims to keep your article bodies clean " \
