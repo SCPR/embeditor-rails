@@ -17,12 +17,14 @@ class Embeditor.Adapters.GoogleMaps extends Embeditor.Adapters.StaticTemplate
         match = @_parseUrl()
         return false if not match
 
-        latlng  = match[1].split(',')
-        lat     = parseFloat(latlng[0])
-        lng     = parseFloat(latlng[1])
+        points  = match[1].split(',')
+        lat     = parseFloat(points[0])
+        lng     = parseFloat(points[1])
+
+        latLng = new google.maps.LatLng(lat, lng)
 
         mapOpts =
-            center      : new google.maps.LatLng(lat, lng)
+            center      : latLng
             zoom        : 10
             mapTypeId   : google.maps.MapTypeId.ROADMAP
 
@@ -31,4 +33,9 @@ class Embeditor.Adapters.GoogleMaps extends Embeditor.Adapters.StaticTemplate
             maxheight       : @queryParams.maxheight
             maxwidth        : @queryParams.maxwidth
 
-        new google.maps.Map($(".#{GoogleMaps.MapTarget}", @wrapper)[0], mapOpts)
+        map = new google.maps.Map(
+            $(".#{GoogleMaps.MapTarget}", @wrapper)[0], mapOpts)
+
+        marker = new google.maps.Marker
+            map         : map
+            position    : latLng
