@@ -11,7 +11,7 @@ window.Embeditor = {
         'scribd'        : 'Embedly'
         # 'documentcloud' : 'DocumentCloud'
         'polldaddy'     : 'Polldaddy'
-        'facebook'      : 'Facebook'
+        'facebook'      : 'Embedly'
         'storify'       : 'Storify'
         'coveritlive'   : 'CoverItLive'
         # 'rebelmouse'    : 'RebelMouse'
