@@ -47,12 +47,18 @@ configured.
 
 There are several adapters included with this engine:
 
-* **Embedly** - Covers several services, such as SoundCloud, Spotify,
-  Facebook, Scribd, among others. Unfortunately, Embedly doesn't work perfectly
-  all the time.
+* **Embedly** - Covers several services, such as SoundCloud, Spotify, Scribd, Google
+  Maps, and others. See
+  [the list of Embedly's providers](http://embed.ly/embed/features/providers).
+  Embedly doesn't always work perfectly, so Embeditor provides manual adapters
+  for some of the providers that Embedly claims to support.
 * **Cover It Live**
 * **Polldaddy**
 * **KPCC's Fire Tracker**
+* **Instagram**
+* **Facebook**
+* **Twitter**
+* **Storify**
 * **Document Cloud** - Not yet supported.
 * **Rebel Mouse** - Not yet supported.
 
@@ -199,16 +205,6 @@ new Embeditor.Base({
 ```
 
 
-### Google Maps
-
-If you're using the Google Maps adapter, you'll need to include the Google Maps
-javascript manually in your header:
-
-```html
-<script src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
-```
-
-
 ### oEmbed vs. non-oEmbed
 
 This library isn't necessarily tied to oEmbed, however it does have support for
@@ -231,3 +227,9 @@ You can extend your adapter from:
 * `Embeditor.Adapters.Oembed`, for oEmbed endpoints.
 * `Embeditor.Adapters.StaticTemplate`, for embeds where the embed code is
   stored in the `/templates` directory and rendered with JST.
+
+
+## Contributing
+
+If you have an adapter that you think would be useful for many, please open
+up a pull request.
