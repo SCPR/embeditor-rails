@@ -1,4 +1,6 @@
 class Embeditor.Adapters.GoogleMaps extends Embeditor.Adapters.StaticTemplate
+    className: "GoogleMaps"
+
     @MapTarget = 'gmap-embed'
     @Template = Embeditor.Template('google_maps')
 

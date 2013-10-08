@@ -2,6 +2,8 @@
 # and only a URL to the photo, not an actual embed code. Therefore, we need to
 # use StaticTemplate to use the iframe embed code.
 class Embeditor.Adapters.Instagram extends Embeditor.Adapters.StaticTemplate
+    className: "Instagram"
+
     @Template = Embeditor.Template('instagram')
 
     @QueryDefaults =

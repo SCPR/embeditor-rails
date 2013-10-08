@@ -1,6 +1,8 @@
 # This doesn't inherit from Adapters.Oembed because the Embedly plugin
 # handles most of that stuff on its own.
 class Embeditor.Adapters.Embedly extends Embeditor.Adapter
+    className: "Embedly"
+
     # This object should hold any keys that we want to
     # send to the API. Any key not in this object will
     # be ignored as a data attribute.

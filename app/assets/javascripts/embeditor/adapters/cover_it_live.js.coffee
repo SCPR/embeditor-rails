@@ -1,4 +1,6 @@
 class Embeditor.Adapters.CoverItLive extends Embeditor.Adapters.StaticTemplate
+    className: "CoverItLive"
+
     @Template = Embeditor.Template('cover_it_live')
 
     @QueryDefaults =
@@ -8,7 +10,6 @@ class Embeditor.Adapters.CoverItLive extends Embeditor.Adapters.StaticTemplate
     @Matchers = [
         new RegExp "/altcast_code=([^/]+)/", "gi"
     ]
-
 
     swap: ->
         # If the href doesn't match our known URL schemes

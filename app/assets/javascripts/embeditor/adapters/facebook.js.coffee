@@ -1,4 +1,6 @@
 class Embeditor.Adapters.Facebook extends Embeditor.Adapters.StaticTemplate
+    className: "Facebook"
+
     @Template = Embeditor.Template('facebook')
 
     @QueryDefaults =

@@ -3,6 +3,8 @@
 # call to an oEmbed endpoint, or if there simply isn't another way to
 # programatically retrieve the embed code.
 class Embeditor.Adapters.StaticTemplate extends Embeditor.Adapter
+    className: "StaticTemplate"
+
     # The template to use.
     @Template = null
 

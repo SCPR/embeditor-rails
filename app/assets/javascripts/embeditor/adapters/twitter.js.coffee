@@ -1,4 +1,6 @@
 class Embeditor.Adapters.Twitter extends Embeditor.Adapters.StaticTemplate
+    className: "Twitter"
+
     @Template = Embeditor.Template('twitter')
 
     # Twitter doesn't give a damn about you or your dimensions.

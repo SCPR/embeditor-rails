@@ -1,4 +1,6 @@
 class Embeditor.Adapters.Storify extends Embeditor.Adapters.StaticTemplate
+    className: "Storify"
+
     @Template = Embeditor.Template('storify')
 
     @QueryDefaults =

@@ -1,4 +1,6 @@
 class Embeditor.Adapters.Oembed extends Embeditor.Adapter
+    className: "Oembed"
+
     # Override this. Oembed endpoint.
     @Path = null
 

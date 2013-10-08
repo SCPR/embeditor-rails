@@ -2,9 +2,10 @@
 # * QueryDefaults - an object of defaults to send as query parameters
 
 class Embeditor.Adapter
+    className: "Adapter"
 
     constructor: (@element, @options={}) ->
-        @adapter        = Embeditor.Adapters[@constructor.name]
+        @adapter        = Embeditor.Adapters[@className]
         @href           = @element.attr('href')
         @dataOptions    = @_extractData()
         @queryParams    = @_buildParams(@dataOptions, options)
@@ -38,8 +39,8 @@ class Embeditor.Adapter
     # 3. The global options specified at Embeditor initialization,
     # 4. This adapter's default options (fallback options).
     _buildParams: (dataOptions, options) ->
-        adapter = @constructor.name
-
         _.defaults(dataOptions,
-            options[adapter]?['query'], options['query']
-            Embeditor.Adapters[adapter].QueryDefaults)
+            @adapter.query,
+            options['query'],
+            @adapter.QueryDefaults
+        )
