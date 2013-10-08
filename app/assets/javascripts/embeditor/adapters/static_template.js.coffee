@@ -2,6 +2,20 @@
 # into the /templates directory. This is either to avoid an expensive
 # call to an oEmbed endpoint, or if there simply isn't another way to
 # programatically retrieve the embed code.
+#
+# Your StaticTemplate adapter MUST define:
+# * @Tempalte - The name of the template to use (in the templates directory)
+#
+# Your StaticTemplate adapter SHOULD define:
+# * @QueryDefaults - The default query paramters if no others are passed in.
+#
+# Your StaticTemplate adapter MAY define:
+# * @Matchers - An array of regular expressions which will be used to extract
+#               important information from the URL (such as an ID).
+#               If your adapter doesn't need a Matcher, then you don't have to
+#               define this property. This property is used by _parseUrl(),
+#               which doesn't get called automatically.
+#
 class Embeditor.Adapters.StaticTemplate extends Embeditor.Adapter
     className: "StaticTemplate"
 
