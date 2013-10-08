@@ -192,7 +192,14 @@ class Embeditor.Adapters.Twitter extends Embeditor.Adapter
 
 ### Embedly
 
-Embedly requires a key. You can provide it while initializing `Embeditor.Base`:
+If you're using the Embedly adapter, you need two things:
+
+1. [embedly-jquery](https://github.com/embedly/embedly-jquery). This is a jquery
+   adapter for the embedly API. Really all you need is a jquery plugin which
+   adds the `embedly()` function, but the `embedly-jquery` library does a nice
+   job.
+2. Embedly requires a key. You can provide it while initializing
+   `Embeditor.Base`:
 
 ```javascript
 new Embeditor.Base({
@@ -227,6 +234,12 @@ You can extend your adapter from:
 * `Embeditor.Adapters.Oembed`, for oEmbed endpoints.
 * `Embeditor.Adapters.StaticTemplate`, for embeds where the embed code is
   stored in the `/templates` directory and rendered with JST.
+
+
+## Known Issues
+
+* Cover It Live and Facebook embeds don't currently work together on the same
+  page. I think it's a javascript incompatibility between the two.
 
 
 ## Contributing
