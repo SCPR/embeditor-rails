@@ -1,8 +1,10 @@
-# Your Adapter should define:
-# * QueryDefaults - an object of defaults to send as query parameters
+# Your Adapter SHOULD define:
+# * @QueryDefaults - The default parameters if no others are passed in.
 
 class Embeditor.Adapter
     className: "Adapter"
+
+    @QueryDefaults = {}
 
     constructor: (@element, @options={}) ->
         @adapter        = Embeditor.Adapters[@className]
