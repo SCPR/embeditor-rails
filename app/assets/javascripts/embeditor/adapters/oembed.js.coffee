@@ -1,12 +1,17 @@
+# Oembed adapters MUST define:
+# * @Endpoint      - The URL to the oembed endpoint
+#
+# Oembed adapters SHOULD defined:
+# * @QueryDefaults - The fallback query parameters if no others are specified.
 class Embeditor.Adapters.Oembed extends Embeditor.Adapter
     className: "Oembed"
 
     # Override this. Oembed endpoint.
-    @Path = null
+    @Endpoint = null
 
     swap: ->
         $.ajax
-            url         : @adapter.Path
+            url         : @adapter.Endpoint
             type        : 'GET'
             dataType    : 'json'
             data        :  _.extend(@queryParams, {url: @href})
