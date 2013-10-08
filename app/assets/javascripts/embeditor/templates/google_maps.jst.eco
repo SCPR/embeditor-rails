@@ -1,2 +1,0 @@
-<div class="<%=@targetClass%>" style="height:<%=@maxheight%>px;width:<%=@maxwidth%>"></div>
-<!-- <iframe width="<%=@maxwidth%>" height="<%=@maxheight%>" frameborder="0" scro`lling="no" marginheight="0" marginwidth="0" src="<%=@url%>&amp;output=embed"></iframe><br /><small><a href="<%=@url%>&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>-->
