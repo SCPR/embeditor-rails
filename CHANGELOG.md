@@ -3,6 +3,9 @@
 #### Changes
 * Switched Facebook to use Embedly. This doesn't really change the behavior,
   because the dedicated Facebook adapter was swapping in the same code anyways.
+* adapter's `wrapper` element is now created in the constructor, instead of
+  when `this.embed()` is called.
+* Polldaddy does some dark magic.
 
 
 ### 0.1.0 (2013-10-08)
