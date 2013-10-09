@@ -61,7 +61,7 @@ There are several adapters included with this engine:
 * **Storify**
 * **Brightcove**
 * **Document Cloud** - Not yet supported.
-* **Rebel Mouse** - Not yet supported.
+* **Rebel Mouse**
 
 None of these are included automatically. To install just the ones you need,
 add them to your `application.js` :
