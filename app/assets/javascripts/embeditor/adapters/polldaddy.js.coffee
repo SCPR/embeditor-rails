@@ -10,7 +10,7 @@ class Embeditor.Adapters.Polldaddy extends Embeditor.Adapters.StaticTemplate
         format    : 'json'
 
     @Matchers = [
-        new RegExp(/https?:\/\/([^\/]+)\/([^\/]+)\/([^\/]+)\/?/)
+        new RegExp /https?:\/\/([^\/]+)\/([^\/]+)\/([^\/]+)\/?/i
     ]
 
 

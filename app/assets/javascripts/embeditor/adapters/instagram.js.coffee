@@ -12,7 +12,7 @@ class Embeditor.Adapters.Instagram extends Embeditor.Adapters.StaticTemplate
 
     @Matchers = [
         # http://instagram.com/p/e8hJe6CvTW/
-        new RegExp "instagram\.com\/p\/([^/]+)", "gi"
+        new RegExp /instagram\.com\/p\/([^\/]+)/i
     ]
 
 

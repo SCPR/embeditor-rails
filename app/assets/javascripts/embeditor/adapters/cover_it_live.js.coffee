@@ -8,7 +8,7 @@ class Embeditor.Adapters.CoverItLive extends Embeditor.Adapters.StaticTemplate
         maxheight : 550
 
     @Matchers = [
-        new RegExp "/altcast_code=([^/]+)/", "gi"
+        new RegExp /\/altcast_code=([^\/]+)\//i
     ]
 
     swap: ->
@@ -20,6 +20,6 @@ class Embeditor.Adapters.CoverItLive extends Embeditor.Adapters.StaticTemplate
         eventId = match[1]
 
         @embed CoverItLive.Template
-            maxheight   : @queryParams.maxheight,
-            maxwidth    : @queryParams.maxwidth,
+            maxheight   : @queryParams.maxheight
+            maxwidth    : @queryParams.maxwidth
             eventId     : eventId
