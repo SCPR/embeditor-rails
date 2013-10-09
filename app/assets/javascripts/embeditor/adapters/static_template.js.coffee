@@ -3,10 +3,9 @@
 # call to an oEmbed endpoint, or if there simply isn't another way to
 # programatically retrieve the embed code.
 #
-# Your StaticTemplate adapter MUST define:
-# * @Tempalte - The name of the template to use (in the templates directory)
-#
 # Your StaticTemplate adapter SHOULD define:
+# * @Template      - The name of the template to use (in the templates
+#                    directory)
 # * @QueryDefaults - The default query paramters if no others are passed in.
 #
 # Your StaticTemplate adapter MAY define:
