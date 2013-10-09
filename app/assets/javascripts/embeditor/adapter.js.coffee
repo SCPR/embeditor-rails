@@ -12,13 +12,14 @@ class Embeditor.Adapter
         @dataOptions    = @_extractData()
         @queryParams    = @_buildParams(@dataOptions, options)
 
+        @wrapper        = $("<div />", class: @options.wrapperClass)
+
 
     swap: ->
         return
 
 
     embed: (html) ->
-        @wrapper = $("<div />", class: @options.wrapperClass)
         @wrapper.html(html)
         @element.after @wrapper
 
