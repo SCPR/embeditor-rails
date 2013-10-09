@@ -5,7 +5,7 @@ class Embeditor.Adapters.RebelMouse extends Embeditor.Adapters.StaticTemplate
 
     @QueryDefaults =
         maxwidth  : 620
-        maxheight : 550
+        maxheight : 1000
 
     @Matchers = [
         new RegExp /rebelmouse\.com\/(.+?)\/?$/i

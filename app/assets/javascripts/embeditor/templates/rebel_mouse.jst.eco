@@ -1,1 +1,1 @@
-<script type="text/javascript" class="rebelmouse-embed-script" src="https://www.rebelmouse.com/static/js-build/embed/embed.js?site=<%=@site%>&amp;height=<%=@maxheight%>&amp;flexible=1&amp;scrollbar_theme=dark"></script>
+<script type="text/javascript" class="rebelmouse-embed-script" src="https://www.rebelmouse.com/static/js-build/embed/embed.js?site=<%=@site%>&amp;height=<%=@maxheight%>&amp;flexible=0&amp;scrollbar_theme=dark"></script>
