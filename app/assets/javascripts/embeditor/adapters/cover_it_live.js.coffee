@@ -17,9 +17,9 @@ class Embeditor.Adapters.CoverItLive extends Embeditor.Adapters.StaticTemplate
         match = @_parseUrl()
         return false if not match
 
-        event_id = match[1]
+        eventId = match[1]
 
         @embed CoverItLive.Template
             maxheight   : @queryParams.maxheight,
             maxwidth    : @queryParams.maxwidth,
-            event_id    : event_id
+            eventId     : eventId

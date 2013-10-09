@@ -20,9 +20,9 @@ class Embeditor.Adapters.Instagram extends Embeditor.Adapters.StaticTemplate
         match = @_parseUrl()
         return false if not match
 
-        photo_id = match[1]
+        photoId = match[1]
 
         @embed Instagram.Template
             maxheight   : @queryParams.maxheight
             maxwidth    : @queryParams.maxwidth
-            photo_id    : photo_id
+            photoId     : photoId
