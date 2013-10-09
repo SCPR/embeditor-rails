@@ -59,6 +59,7 @@ There are several adapters included with this engine:
 * **Facebook**
 * **Twitter**
 * **Storify**
+* **Brightcove**
 * **Document Cloud** - Not yet supported.
 * **Rebel Mouse** - Not yet supported.
 

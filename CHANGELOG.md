@@ -1,4 +1,6 @@
 ### 0.2.0 (unreleased)
+#### Additions
+* Added Brightcove adapter.
 
 #### Changes
 * Switched Facebook to use Embedly. This doesn't really change the behavior,
