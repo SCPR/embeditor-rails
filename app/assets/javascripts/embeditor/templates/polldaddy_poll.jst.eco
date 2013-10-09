@@ -1,2 +1,1 @@
-<iframe src="http://polldaddy.com/poll/<%=@id%>" frameborder="no" width="100%" height="<%=@maxheight%>"></iframe>
-<!--<script type="text/javascript" charset="utf-8" src="http://static.polldaddy.com/p/<%=@id%>.js"></script><noscript><a href="http://polldaddy.com/poll/<%=@id%>/">View Poll</a></noscript>-->
+<script type="text/javascript" charset="utf-8" src="http://static.polldaddy.com/p/<%=@id%>.js"></script><noscript><a href="http://polldaddy.com/poll/<%=@id%>/">View Poll</a></noscript>

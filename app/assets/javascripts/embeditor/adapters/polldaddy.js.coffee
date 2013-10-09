@@ -24,12 +24,18 @@ class Embeditor.Adapters.Polldaddy extends Embeditor.Adapters.StaticTemplate
 
         template = @_findTemplate(type)
 
+        oldDocumentWrite = document.write
+        document.write = (html) => @wrapper.append(html)
+
         @embed template
             maxheight   : @queryParams.maxheight
             maxwidth    : @queryParams.maxwidth
             domain      : domain
             id          : id
 
+        setTimeout ->
+            document.write = oldDocumentWrite
+        , 500
 
     _findTemplate: (type) ->
         template = switch type
