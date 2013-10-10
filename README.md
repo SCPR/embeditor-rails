@@ -19,7 +19,7 @@ The following dependencies must be included manually. I hope to remove these
 eventually.
 
 * [jQuery](http://jquery.com/)
-* [`underscore.js`](http://underscorejs.org/)
+* [underscore.js](http://underscorejs.org/)
 
 
 ## Usage
