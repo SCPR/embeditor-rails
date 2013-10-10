@@ -30,36 +30,32 @@ class Embeditor.Adapters.DocumentCloud extends Embeditor.Adapters.StaticTemplate
 
         isAnnotation = !!annotationId
 
-        oldDocumentWrite = document.write
+        oldDocumentWriteFunc = document.write
         document.write = (html) => @wrapper.append(html)
 
         # Document embed
-        if not isAnnotation and not window.DV
-            $.getScript DocumentCloud.Scripts.Document,
-                (script, textStatus, jqXHR) =>
-                    @embed DocumentCloud.Template.Document
-                        maxheight       : @queryParams.maxheight
-                        maxwidth        : @queryParams.maxwidth
-                        documentId      : documentId
+        if not isAnnotation
+            @embed DocumentCloud.Template.Document
+                maxheight       : @queryParams.maxheight
+                maxwidth        : @queryParams.maxwidth
+                documentId      : documentId
 
-                    @_resetDocumentWriteOverwrite(oldDocumentWrite)
+            @_resetDocumentWrite(oldDocumentWriteFunc)
             return true
 
         # Annotation embed
-        if isAnnotation and not window.dc
-            $.getScript DocumentCloud.Scripts.Annotation,
-                (script, textStatus, jqXHR) =>
-                    @embed DocumentCloud.Template.Annotation
-                        maxheight       : @queryParams.maxheight
-                        maxwidth        : @queryParams.maxwidth
-                        documentId      : documentId
-                        annotationId    : annotationId
+        if isAnnotation
+            @embed DocumentCloud.Template.Annotation
+                maxheight       : @queryParams.maxheight
+                maxwidth        : @queryParams.maxwidth
+                documentId      : documentId
+                annotationId    : annotationId
 
-                    @_resetDocumentWriteOverwrite(oldDocumentWrite)
+            @_resetDocumentWrite(oldDocumentWriteFunc)
             return true
 
 
-    _resetDocumentWriteOverwrite: (oldDocumentWrite) ->
+    _resetDocumentWrite: (oldFunc) ->
         setTimeout ->
-            document.write = oldDocumentWrite
+            document.write = oldFunc
         , 500

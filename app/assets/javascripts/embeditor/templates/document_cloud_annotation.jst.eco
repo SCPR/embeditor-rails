@@ -1,4 +1,6 @@
 <div id="DC-note-<%=@annotationId%>"></div>
+<script src="http://s3.documentcloud.org/notes/loader.js"></script>
+
 <script>
     dc.embed.loadNote('http://www.documentcloud.org/documents/<%=@documentId%>/annotations/<%=@annotationId%>.js')
 </script>
