@@ -1,4 +1,9 @@
-### 1.0.0 (2013-10-09)
+### 1.0.1 (2013-10-09)
+* I accidentally built and pushed a gem with some missing files. This release
+  fixes it.
+
+
+### 1.0.0 (yanked)
 #### Additions
 * Added Brightcove adapter.
 * Added RebelMouse adapter.
