@@ -6,6 +6,7 @@ window.Embeditor = {
         'vimeo'         : 'Embedly'
         'brightcove'    : 'Brightcove'
         'ustream'       : 'Embedly'
+        'livestream'    : 'Embedly'
         'vine'          : 'Embedly'
         'googlemaps'    : 'Embedly'
         'scribd'        : 'Embedly'
