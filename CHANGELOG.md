@@ -2,6 +2,7 @@
 #### Additions
 * Added Brightcove adapter.
 * Added RebelMouse adapter.
+* Added DocumentCloud adapter.
 
 #### Changes
 * Switched Facebook to use Embedly. This doesn't really change the behavior,

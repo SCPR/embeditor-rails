@@ -1,0 +1,6 @@
+<div id="dc-embed-<%=@documentId%>"></div>
+<script>
+  DV.load('http://www.documentcloud.org/documents/<%=@documentId%>.js', {
+    container : '#dc-embed-<%=@documentId%>'
+  });
+</script>

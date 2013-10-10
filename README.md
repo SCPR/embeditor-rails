@@ -48,19 +48,18 @@ configured.
 There are several adapters included with this engine:
 
 * **Embedly** - Covers several services, such as SoundCloud, Spotify, Scribd, Google
-  Maps, and others. See
+  Maps, and several others. See
   [the list of Embedly's providers](http://embed.ly/embed/features/providers).
   Embedly doesn't always work perfectly, so Embeditor provides manual adapters
-  for some of the providers that Embedly claims to support.
+  for some of the providers that Embedly claims to support (and some that it doesn't).
 * **Cover It Live**
 * **Polldaddy**
 * **KPCC's Fire Tracker**
 * **Instagram**
-* **Facebook**
 * **Twitter**
 * **Storify**
 * **Brightcove**
-* **Document Cloud** - Not yet supported.
+* **Document Cloud**
 * **Rebel Mouse**
 
 None of these are included automatically. To install just the ones you need,

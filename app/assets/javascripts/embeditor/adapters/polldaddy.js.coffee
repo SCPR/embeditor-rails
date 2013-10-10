@@ -7,7 +7,6 @@ class Embeditor.Adapters.Polldaddy extends Embeditor.Adapters.StaticTemplate
     @QueryDefaults =
         maxwidth  : 620
         maxheight : 550
-        format    : 'json'
 
     @Matchers = [
         new RegExp /https?:\/\/([^\/]+)\/([^\/]+)\/([^\/]+)\/?/i
