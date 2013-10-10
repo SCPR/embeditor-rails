@@ -15,8 +15,11 @@ gem 'embeditor'
 
 ## Dependencies
 
-Currently, [`underscore.js`](http://underscorejs.org/) is a required dependency.
-I hope to remove this dependency eventually.
+The following dependencies must be included manually. I hope to remove these
+eventually.
+
+* [jQuery](http://jquery.com/)
+* [`underscore.js`](http://underscorejs.org/)
 
 
 ## Usage

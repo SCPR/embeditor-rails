@@ -1,3 +1,10 @@
+### 1.1.0 (unreleased)
+#### Changes
+* Added CoffeeScript to the dependencies. This was always a dependency, but now
+  it's official.
+* Replaced the `rails` dependency with only an `actionpack` dependency.
+
+
 ### 1.0.1 (2013-10-09)
 * I accidentally built and pushed a gem with some missing files. This release
   fixes it.
