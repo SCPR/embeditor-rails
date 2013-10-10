@@ -1,4 +1,4 @@
-### 0.2.0 (unreleased)
+### 1.0.0 (2013-10-09)
 #### Additions
 * Added Brightcove adapter.
 * Added RebelMouse adapter.

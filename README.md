@@ -240,7 +240,7 @@ You can extend your adapter from:
 ## Known Issues
 
 * Cover It Live and Facebook embeds don't currently work together on the same
-  page. I think it's a javascript incompatibility between the two.
+  page, due to a javascript conflict between the two.
 
 
 ## Contributing
