@@ -9,6 +9,7 @@ window.Embeditor = {
         'livestream'    : 'Embedly'
         'vine'          : 'Embedly'
         'googlemaps'    : 'Embedly'
+        'googlefusion'  : 'GoogleFusion'
         'scribd'        : 'Embedly'
         # 'documentcloud' : 'DocumentCloud'
         'polldaddy'     : 'Polldaddy'

@@ -1,0 +1,1 @@
+<iframe width="<%=@maxwidth%>" height="<%=@maxheight%>" scrolling="no" frameborder="no" src="<%=@url%>"></iframe>
