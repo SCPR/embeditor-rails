@@ -236,6 +236,12 @@ This eliminates any oEmbed headaches (Access-Control-Allowed-Origin, for
 example), and also reduces the time it takes for an embed to load.
 
 
+## CKEditor plugin
+
+An unofficial CKEditor plugin can be found [HERE](https://github.com/SCPR/SCPRv4/blob/master/vendor/assets/javascripts/ckeditor/plugins/embed-placeholder/plugin.js).
+Copy and paste it into your own repository.
+
+
 ## Extending
 
 You can/should add your own adapters! It's easy, I promise. If you add one
