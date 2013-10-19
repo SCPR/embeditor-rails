@@ -30,10 +30,14 @@ window.Embeditor = {
         JST[@TemplatePath + template]
 
     DefaultOptions :
-        defaultAdapter      : 'Embedly' # Adapter that gets used when the service isn't recognized
-        defaultService      : 'other'   # Service that gets used when the `data-service` attribute is missing
-        placeholderClass    : "embed-placeholder" # The class that the embed placeholders have
-        wrapperClass        : "embed-wrapper" # The class the embed's wrapper should be given
+         # Adapter that gets used when the service isn't recognized
+        defaultAdapter      : 'Embedly'
+        # Service that gets used when the `data-service` attribute is missing
+        defaultService      : 'other'
+        # The class that the embed placeholders have
+        placeholderClass    : "embed-placeholder"
+        # The class the embed's wrapper should be given
+        wrapperClass        : "embed-wrapper"
 }
 
 

@@ -10,7 +10,7 @@ class Embeditor.Adapters.Embedly extends Embeditor.Adapter
         maxheight   : 450
 
     @PluginDefaults =
-        method      : "after"
+        method      : 'after'
         className   : Embeditor.DefaultOptions.wrapperClass
         endpoint    : 'oembed'
         # Key must be specified
