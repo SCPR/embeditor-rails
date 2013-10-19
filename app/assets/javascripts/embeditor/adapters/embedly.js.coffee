@@ -32,6 +32,8 @@ class Embeditor.Adapters.Embedly extends Embeditor.Adapter
         if @embedlyParams
             return @embedlyParams
 
+        # Use `data-placement` as the embedly method parameter
         @embedlyParams = _.extend(
+            { method : @display.placement },
             @pluginOptions,
             query : @queryParams)

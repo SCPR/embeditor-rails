@@ -137,7 +137,12 @@ endpoint:
 When initializing the global `Embeditor.Base` object, you may specify
 configuration for individual adapters.
 
-The `plugin` object is for configuring the adapter.
+The `plugin` object is for configuring the adapter. The properties depends on
+the adapter.
+
+The `display` object is for configuring display options. Properties:
+* `placement` - the jQuery method to use for placing the embed, such as
+  `before`, `after`, or `replaceWith`. Default is `after`.
 
 The `query` object is for configuring the query parameters, or in the case of
 an adapter which doesn't use a query, it's for configuring the embed properties.
@@ -157,6 +162,9 @@ new Embeditor.Base({
     FireTracker: {
         query: {
             maxheight: 350
+        },
+        display: {
+          placement: 'replaceWith'
         }
     },
     CoverItLive: {
@@ -189,6 +197,9 @@ parameters:
 class Embeditor.Adapters.Twitter extends Embeditor.Adapter
     @QueryDefaults =
         maxheight: 500
+
+    @DisplayDefaults =
+        placement: 'before'
 
     # ...
 ```
@@ -225,7 +236,6 @@ This eliminates any oEmbed headaches (Access-Control-Allowed-Origin, for
 example), and also reduces the time it takes for an embed to load.
 
 
-
 ## Extending
 
 You can/should add your own adapters! It's easy, I promise. If you add one
@@ -239,6 +249,8 @@ You can extend your adapter from:
 * `Embeditor.Adapters.StaticTemplate`, for embeds where the embed code is
   stored in the `/templates` directory and rendered with JST.
 
+**NOTE** Any function beginning with an underscore, like `_extractData()`,
+should be considered a private function.
 
 ## Known Issues
 
