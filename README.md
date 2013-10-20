@@ -141,8 +141,8 @@ The `plugin` object is for configuring the adapter. The properties depends on
 the adapter.
 
 The `display` object is for configuring display options. Properties:
-* `placement` - the jQuery method to use for placing the embed, such as
-  `before`, `after`, or `replaceWith`. Default is `after`.
+* `placement` - the method to use for placing the embed, such as
+  `before`, `after`, or `replace`. Default is `after`.
 
 The `query` object is for configuring the query parameters, or in the case of
 an adapter which doesn't use a query, it's for configuring the embed properties.
