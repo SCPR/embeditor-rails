@@ -30,7 +30,7 @@ class Embeditor.Adapter
 
     embed: (html) ->
         @wrapper.html(html)
-        @element[Embeditor.PlacementFunctions(@display.placement)](@wrapper)
+        @element[Embeditor.PlacementFunctions[@display.placement]](@wrapper)
 
 
 
