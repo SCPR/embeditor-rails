@@ -3,6 +3,12 @@
 class Embeditor.Adapters.Embedly extends Embeditor.Adapter
     className: "Embedly"
 
+    # Map `data-placement` to Embedly `method` parameter options.
+    @MethodMap =
+        replace     : 'replace'
+        before      : 'before'
+        after       : 'after'
+
     # This object should hold any keys that we want to
     # send to the API. Any key not in this object will
     # be ignored as a data attribute.
@@ -17,7 +23,7 @@ class Embeditor.Adapters.Embedly extends Embeditor.Adapter
 
 
     constructor: (@element, @options={}) ->
-        pluginOpts = options['Embedly']?['plugin'] or {}
+        pluginOpts = @options['Embedly']?['plugin']
         @pluginOptions = _.defaults(pluginOpts, Embedly.PluginDefaults)
 
         super
@@ -25,6 +31,7 @@ class Embeditor.Adapters.Embedly extends Embeditor.Adapter
 
     swap: ->
         params = @_buildEmbedlyParams()
+        console.log params
         @element.embedly(params)
 
 
@@ -34,6 +41,7 @@ class Embeditor.Adapters.Embedly extends Embeditor.Adapter
 
         # Use `data-placement` as the embedly method parameter
         @embedlyParams = _.extend(
-            { method : @display.placement },
-            @pluginOptions,
+            _.defaults({
+                method : Embedly.MethodMap[@display.placement]
+            }, @pluginOptions),
             query : @queryParams)

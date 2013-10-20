@@ -38,6 +38,11 @@ window.Embeditor = {
         placeholderClass    : "embed-placeholder"
         # The class the embed's wrapper should be given
         wrapperClass        : "embed-wrapper"
+
+    PlacementFunctions :
+        before  : 'before'
+        after   : 'after'
+        replace : 'replaceWith'
 }
 
 
