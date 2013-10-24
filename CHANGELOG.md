@@ -9,6 +9,10 @@
   it's official.
 * Replaced the `rails` dependency with only an `actionpack` dependency.
 
+#### Fixes
+* Fixed a bug when merging defaults together, where empty strings weren't
+  being overwritten.
+
 #### Deprecations
 * `Adapter#dataOptions` is deprecated with no replacement.
   Use `Adapter#queryParams` and `Adapter#display` to get the data options.

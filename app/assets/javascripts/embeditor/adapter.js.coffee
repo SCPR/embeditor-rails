@@ -46,7 +46,7 @@ class Embeditor.Adapter
 
 
     _buildDisplayOptions: (data) ->
-        _.defaults(data, # What the user wants
+        @_defaultsWithoutEmptyStrings(data, # What the user wants
             @options[@adapter]?['display'], # What the developer wants
             @options['display'], # What the developer wants globally
             @adapter.DisplayDefaults # What Embeditor wants
@@ -60,8 +60,22 @@ class Embeditor.Adapter
     # 3. The global options specified at Embeditor initialization,
     # 4. This adapter's default options (fallback options).
     _buildQueryParams: (data) ->
-        _.defaults(data,
+        @_defaultsWithoutEmptyStrings(data,
             @options[@adapter]?['query'],
             @options['query'],
             @adapter.QueryDefaults
         )
+
+    # Like Underscore.defaults, but it will also fill in empty strings.
+    # This should be used when merging objects that including any user
+    # input.
+    _defaultsWithoutEmptyStrings: (obj) ->
+        args = Array.prototype.slice.call(arguments, 1)
+
+        for source in args
+            continue if !source
+
+            for prop,value of source
+                obj[prop] = source[prop] if !obj[prop]
+
+        obj
