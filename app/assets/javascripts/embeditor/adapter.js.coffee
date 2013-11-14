@@ -67,7 +67,7 @@ class Embeditor.Adapter
         )
 
     # Like Underscore.defaults, but it will also fill in empty strings.
-    # This should be used when merging objects that including any user
+    # This should be used when merging objects that includes any user
     # input.
     _defaultsWithoutEmptyStrings: (obj) ->
         args = Array.prototype.slice.call(arguments, 1)

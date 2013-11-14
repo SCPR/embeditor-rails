@@ -72,9 +72,9 @@ class Embeditor.Base
             #
             # If "service" is present but has no match in the Adapters object,
             # then we want to use the default handler as a fallback.
-            service = link.data('service') || @options.defaultService
-            adapterName = @adapters[service] || @options.defaultAdapter
-            adapter = Embeditor.Adapters[adapterName]
+            service         = link.data('service') || @options.defaultService
+            adapterName     = @adapters[service] || @options.defaultAdapter
+            adapter         = Embeditor.Adapters[adapterName]
 
             return if not adapter
 
