@@ -1,0 +1,28 @@
+<object width="480" height="300">
+    <param name="movie" value="http://www.whitehouse.gov/sites/default/modules/wh_multimedia/EOP_OVP_player.swf">
+    <param name="allowScriptAccess" value="always">
+    <param name="wmode" value="opaque">
+    <param name="bgcolor" value="#FFFFFF">
+    <param name="scale" value="showall">
+    <param name="quality" value="best">
+    <param name="align" value="l">
+    <param name="allowfullscreen" value="true">
+    <param name="play" value="false">
+    <param name="menu" value="false">
+    <param name="loop" value="false">
+    <param name="flashvars" value="player=http://www.whitehouse.gov/sites/default/modules/wh_multimedia/EOP_OVP_player.swf&amp;src=rtmp://cp68969.live.edgefcs.net/live/WHLive2@4854&amp;scaleMode=stretch&amp;link=http://www.whitehouse.gov/live&amp;path_to_image=http://www.whitehouse.gov/sites/default/themes/whitehouse/img/facebook_bubble.gif&amp;width=480&amp;height=300">
+    <embed src="http://www.whitehouse.gov/sites/default/modules/wh_multimedia/EOP_OVP_player.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="300" flashvars="player=http://www.whitehouse.gov/sites/default/modules/wh_multimedia/EOP_OVP_player.swf&amp;src=rtmp://cp68969.live.edgefcs.net/live/WHLive2@4854&amp;scaleMode=stretch&amp;link=http://www.whitehouse.gov/live&amp;path_to_image=http://www.whitehouse.gov/sites/default/themes/whitehouse/img/facebook_bubble.gif&amp;width=480&amp;height=300">
+</object>
+
+<!-- LIVE CHAT -->
+<div style="background-color:#282828; width:480px; font-size:10px; font-family:Arial, Helvetica, Sans-Serif;">
+    <div style="border-top:solid 1px #666666; margin:0 10px; height:40px; display:block;">
+        <div style="background:url(http://www.whitehouse.gov/sites/default/themes/whitehouse/img/facebook_bubble.gif) no-repeat; padding-top:13px; height:30px; float:left;">
+            <a href="http://apps.facebook.com/whitehouselive/" style="text-decoration:none; color:#ABABAB; margin-left:28px;">JOIN THE LIVE CHAT</a>
+        </div>
+        <div style="padding-top:13px; height:30px; float:right;">
+            <a href="http://www.whitehouse.gov" style="text-decoration:none; color:#ABABAB;">VISIT WHITEHOUSE.GOV</a>
+        </div>
+    </div>
+</div>
+<!-- END LIVE CHAT -->
