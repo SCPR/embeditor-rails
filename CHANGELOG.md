@@ -1,4 +1,25 @@
-## 1.1.1 (unreleased)
+## 2.0.0
+#### Additions
+* Added `Adapter#service`, which reads from the `data-service` attribute.
+* The wrapper element now gets the service added to it as a class. A YouTube
+  embed will have a wrapper class `youtube`, for example.
+
+#### Changes
+* Removed Plugin options.
+* Embedly now uses the Oembed adapter. `embedly.jquery` is no longer a
+  dependency. Your API Key should be specified as a `query` option, not
+  `plugin`. For example:
+
+```javascript
+new Embeditor.Base({
+    Embedly: {
+        query: { key: 'YOUR_API_KEY' }
+    }
+})
+```
+
+
+## 1.1.1
 #### Changes
 * Minor internal cleanup
 

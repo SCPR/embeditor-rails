@@ -13,7 +13,11 @@ class Embeditor.Adapter
     constructor: (@element, @options={}) ->
         @adapter    = Embeditor.Adapters[@className]
         @href       = @element.attr('href')
-        @wrapper    = $("<div />", class: @options.wrapperClass)
+        @service    = @element.data('service')
+
+        @wrapper    = $("<div />", {
+            class: @options.wrapperClass + ' ' + @service
+        })
 
         displayData     = @_extractData('DisplayDefaults')
         @display        = @_buildDisplayOptions(displayData)
@@ -24,10 +28,21 @@ class Embeditor.Adapter
 
 
     # @Override
+    #
+    # Use this method to swap a placeholder with an embed. It should be
+    # specified on a per-adapter basis.
+    #
+    # This method could have some logic to figure out the parameters,
+    # parse the URL, whatever, and then will probably call `this.embed()`
+    # to actually modify the DOM.
     swap: ->
         return
 
 
+    # Put the embed inside the wrapper element, and then move the wrapper
+    # element into place (relative to the placeholder link).
+    #
+    # This is a good function to call at the end of the swap() function.
     embed: (html) ->
         @wrapper.html(html)
         @element[Embeditor.PlacementFunctions[@display.placement]](@wrapper)

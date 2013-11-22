@@ -6,8 +6,12 @@
 class Embeditor.Adapters.Oembed extends Embeditor.Adapter
     className: "Oembed"
 
-    # Override this. Oembed endpoint.
+    # @Override
+    #
+    # The Oembed endpoint for the adapter.
+    # Example: http://projects.scpr.org/firetracker/oembed
     @Endpoint = null
+
 
     swap: ->
         $.ajax

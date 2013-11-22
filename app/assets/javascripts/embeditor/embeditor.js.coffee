@@ -40,9 +40,9 @@ window.Embeditor = {
         wrapperClass        : "embed-wrapper"
 
     PlacementFunctions :
-        before  : 'before'
-        after   : 'after'
-        replace : 'replaceWith'
+        before          : 'before'
+        after           : 'after'
+        replace         : 'replaceWith'
 }
 
 

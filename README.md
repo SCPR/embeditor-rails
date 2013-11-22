@@ -28,9 +28,11 @@ eventually.
 Eventually it will be extracted to a pure-JS library and this gem will be a
 simple wrapper around it.
 
-First, add `embeditor` to your `application.js` manifest file:
+First, add `embeditor` and dependencies to your `application.js` manifest file:
 
 ```javascript
+//= require jquery
+//= require underscore
 //= require embeditor
 ```
 
@@ -137,9 +139,6 @@ endpoint:
 When initializing the global `Embeditor.Base` object, you may specify
 configuration for individual adapters.
 
-The `plugin` object is for configuring the adapter. The properties depends on
-the adapter.
-
 The `display` object is for configuring display options. Properties:
 * `placement` - the method to use for placing the embed, such as
   `before`, `after`, or `replace`. Default is `after`.
@@ -154,9 +153,6 @@ new Embeditor.Base({
     Embedly: {
         query: {
             maxheight: 450
-        },
-        plugin: {
-            key: '12345'
         }
     },
     FireTracker: {
@@ -207,20 +203,15 @@ class Embeditor.Adapters.Twitter extends Embeditor.Adapter
 
 ### Embedly
 
-If you're using the Embedly adapter, you need two things:
-
-1. [embedly-jquery](https://github.com/embedly/embedly-jquery). This is a jquery
-   adapter for the embedly API. Really all you need is a jquery plugin which
-   adds the `embedly()` function, but the `embedly-jquery` library does a nice
-   job.
-2. Embedly requires a key. You can provide it while initializing
-   `Embeditor.Base`:
+Embedly requires an API key.
+You can provide it in the `query` options for the Embedly adapter when
+initializing `Embeditor.Base`:
 
 ```javascript
 new Embeditor.Base({
     Embedly: {
-        plugin: {
-            key: '12345'
+        query: {
+            key: 'YOUR_API_KEY'
         }
     }
 })
@@ -257,6 +248,7 @@ You can extend your adapter from:
 
 **NOTE** Any function beginning with an underscore, like `_extractData()`,
 should be considered a private function.
+
 
 ## Known Issues
 
