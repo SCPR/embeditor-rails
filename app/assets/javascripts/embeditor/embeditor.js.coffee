@@ -38,11 +38,23 @@ window.Embeditor = {
         placeholderClass    : "embed-placeholder"
         # The class the embed's wrapper should be given
         wrapperClass        : "embed-wrapper"
+        # The element name which should be wrapped around all embed.
+        # TODO: Allow setting this to "false" for no wrapper.
+        wrapperElement      : "div"
+        # Default embed placement, if a placement is somehow missing or
+        # it doesn't exist in the PlacementFunctions object.
+        defaultPlacement    : 'after'
 
+    # jQuery function mapping for embed placement,
+    # relative to the placeholder link.
+    #
+    # Keys are the `data-placement` attribute, and values are the
+    # jQuery functions.
     PlacementFunctions :
         before          : 'before'
         after           : 'after'
         replace         : 'replaceWith'
+
 }
 
 

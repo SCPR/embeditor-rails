@@ -45,7 +45,11 @@ class Embeditor.Adapter
     # This is a good function to call at the end of the swap() function.
     embed: (html) ->
         @wrapper.html(html)
-        @element[Embeditor.PlacementFunctions[@display.placement]](@wrapper)
+
+        placementFunc = Embeditor.PlacementFunctions[@display.placement] ||
+                        Embeditor.PlacementFunctions[@options.defaultPlacement]
+
+        @element[placementFunc](@wrapper)
 
 
 

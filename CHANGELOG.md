@@ -18,6 +18,10 @@ new Embeditor.Base({
 })
 ```
 
+#### Fixes
+* Fixed a bug where an embed wouldn't render if its `data-placement` attribute
+  wasn't found in the PlacementFunctions object.
+
 
 ## 1.1.1
 #### Changes
