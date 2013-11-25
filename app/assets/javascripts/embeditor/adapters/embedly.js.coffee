@@ -1,8 +1,3 @@
-# This doesn't inherit from Adapters.Oembed because the Embedly plugin
-# handles most of that stuff on its own.
-#
-# Note that the Wrapper element is actually made by the Embedly jQuery plugin,
-# not this one.
 class Embeditor.Adapters.Embedly extends Embeditor.Adapters.Oembed
     className: "Embedly"
 
