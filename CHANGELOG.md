@@ -8,6 +8,7 @@
 * The element that gets wrapped around embeds can also be specified, via the
   `wrapperElement` option. This should be an element name, such as `div`,
   `p`, `span`, etc.
+* Added support for `photo` oEmbed type.
 
 #### Changes
 * Removed Plugin options.
