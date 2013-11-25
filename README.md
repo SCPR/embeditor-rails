@@ -183,6 +183,22 @@ new Embeditor.Base({
 })
 ```
 
+There are also some Embeditor options you can configure:
+
+* `defaultAdapter` - Adapter that gets used when the service isn't recognized.
+  default: `Embedly`
+* `defaultServer` - Service that gets used when the `data-service` attribute is
+  missing. default: `other`
+* `placeholderClass` - The class that the embed placeholders are given.
+  default: `embed-placeholder`
+* `wrapperClass` - The class the embed's wrapper is given.
+  default: `embed-wrapper`
+* `wrapperElement` - The element which should be wrapped around all embeds.
+  default: `div`
+* `defaultPlacement` - Default embed placement, if a placement is somehow
+  missing or it doesn't exist in the PlacementFunctions object. default: `after`
+
+
 #### Adapter-specific defaults
 
 Finally, if you're writing an adapter, you should specify a `QueryDefaults`

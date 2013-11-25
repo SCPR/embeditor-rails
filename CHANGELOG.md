@@ -3,10 +3,15 @@
 * Added `Adapter#service`, which reads from the `data-service` attribute.
 * The wrapper element now gets the service added to it as a class. A YouTube
   embed will have a wrapper class `youtube`, for example.
+* You can now specify the default placement for embeds when initializing
+  Embeditor, via the `defaultPlacement` option.
+* The element that gets wrapped around embeds can also be specified, via the
+  `wrapperElement` option. This should be an element name, such as `div`,
+  `p`, `span`, etc.
 
 #### Changes
 * Removed Plugin options.
-* Embedly now uses the Oembed adapter. `embedly.jquery` is no longer a
+* [BREAKING] Embedly now uses the Oembed adapter. `embedly.jquery` is no longer a
   dependency. Your API Key should be specified as a `query` option, not
   `plugin`. For example:
 

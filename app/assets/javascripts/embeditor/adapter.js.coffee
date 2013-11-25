@@ -15,7 +15,7 @@ class Embeditor.Adapter
         @href       = @element.attr('href')
         @service    = @element.data('service')
 
-        @wrapper    = $("<div />", {
+        @wrapper    = $("<#{@options.wrapperElement} />", {
             class: @options.wrapperClass + ' ' + @service
         })
 
