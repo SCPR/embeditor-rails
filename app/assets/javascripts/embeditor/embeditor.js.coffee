@@ -20,7 +20,7 @@ window.Embeditor = {
         'firetracker'   : 'FireTracker'
         'twitter'       : 'Twitter'
         'instagram'     : 'Instagram'
-        'soundcloud'    : 'Embedly'
+        'soundcloud'    : 'Soundcloud'
         'spotify'       : 'Embedly'
         'other'         : 'Embedly'
 
