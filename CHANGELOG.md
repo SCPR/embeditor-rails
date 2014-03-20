@@ -1,4 +1,3 @@
-## 2.0.0
 #### Additions
 * Added `Adapter#service`, which reads from the `data-service` attribute.
 * The wrapper element now gets the service added to it as a class. A YouTube
