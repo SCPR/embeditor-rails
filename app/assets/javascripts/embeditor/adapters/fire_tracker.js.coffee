@@ -1,7 +1,7 @@
 class Embeditor.Adapters.FireTracker extends Embeditor.Adapters.Oembed
     className: "FireTracker"
 
-    @Endpoint = "http://projects.scpr.org/firetracker/oembed"
+    @Endpoint = "http://firetracker.scpr.org/oembed"
 
     @QueryDefaults =
         maxwidth    : 510

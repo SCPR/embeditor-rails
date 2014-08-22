@@ -1,3 +1,6 @@
+## 2.0.1
+* Updated Fire Tracker adapter to adopt new URL scheme.
+
 ## 2.0.0
 #### Additions
 * Added `Adapter#service`, which reads from the `data-service` attribute.
