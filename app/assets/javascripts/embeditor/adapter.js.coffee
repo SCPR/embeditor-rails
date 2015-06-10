@@ -66,7 +66,7 @@ class Embeditor.Adapter
 
     _buildDisplayOptions: (data) ->
         @_defaultsWithoutEmptyStrings(data, # What the user wants
-            @options[@adapter]?['display'], # What the developer wants
+            @options[@className]?['display'], # What the developer wants
             @options['display'], # What the developer wants globally
             @adapter.DisplayDefaults # What Embeditor wants
         )
@@ -80,7 +80,7 @@ class Embeditor.Adapter
     # 4. This adapter's default options (fallback options).
     _buildQueryParams: (data) ->
         @_defaultsWithoutEmptyStrings(data,
-            @options[@adapter?.name]?['query'],
+            @options[@className]?['query'],
             @options['query'],
             @adapter.QueryDefaults
         )
