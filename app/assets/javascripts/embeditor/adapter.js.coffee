@@ -80,7 +80,7 @@ class Embeditor.Adapter
     # 4. This adapter's default options (fallback options).
     _buildQueryParams: (data) ->
         @_defaultsWithoutEmptyStrings(data,
-            @options[@adapter]?['query'],
+            @options[@adapter?.name]?['query'],
             @options['query'],
             @adapter.QueryDefaults
         )
