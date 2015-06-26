@@ -11,7 +11,7 @@ window.Embeditor = {
         'googlemaps'    : 'Embedly'
         'googlefusion'  : 'GoogleFusion'
         'scribd'        : 'Embedly'
-        # 'documentcloud' : 'DocumentCloud'
+        'documentcloud' : 'DocumentCloud'
         'polldaddy'     : 'Polldaddy'
         'facebook'      : 'Embedly'
         'storify'       : 'Storify'
