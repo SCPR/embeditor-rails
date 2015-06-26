@@ -22,6 +22,7 @@ window.Embeditor = {
         'instagram'     : 'Instagram'
         'soundcloud'    : 'Embedly'
         'spotify'       : 'Embedly'
+        'ranker'        : 'Ranker'
         'other'         : 'Embedly'
 
     TemplatePath : 'embeditor/templates/'
