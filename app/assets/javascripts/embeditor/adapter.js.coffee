@@ -95,6 +95,6 @@ class Embeditor.Adapter
             continue if !source
 
             for prop,value of source
-                obj[prop] = source[prop] if !obj[prop]
+                obj[prop] = source[prop] if !obj[prop] and value
 
         obj
