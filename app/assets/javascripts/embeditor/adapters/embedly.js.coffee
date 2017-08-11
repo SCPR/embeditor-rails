@@ -1,7 +1,7 @@
 class Embeditor.Adapters.Embedly extends Embeditor.Adapters.Oembed
     className: "Embedly"
 
-    @Endpoint = "http://api.embed.ly/1/oembed"
+    @Endpoint = "https://api.embed.ly/1/oembed"
 
     # This object should hold any keys that we want to
     # send to the API. Any key not in this object will
