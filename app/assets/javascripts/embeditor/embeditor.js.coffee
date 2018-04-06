@@ -2,7 +2,7 @@ window.Embeditor = {
     Adapters : {}
 
     DefaultAdapters :
-        'youtube'       : 'Embedly'
+        'youtube'       : 'YouTube'
         'vimeo'         : 'Embedly'
         'brightcove'    : 'Brightcove'
         'ustream'       : 'Embedly'

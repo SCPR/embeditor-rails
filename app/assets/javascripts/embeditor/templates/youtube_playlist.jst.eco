@@ -1,0 +1,1 @@
+<iframe width="<%=@maxwidth%>" height="<%=@maxheight%>" src="https://www.youtube.com/embed/videoseries?list=<%=@listid%>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
