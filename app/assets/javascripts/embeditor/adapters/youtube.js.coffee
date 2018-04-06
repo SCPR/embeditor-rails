@@ -6,7 +6,7 @@ class Embeditor.Adapters.YouTube extends Embeditor.Adapters.StaticTemplate
 
     @QueryDefaults =
         maxwidth  : 560
-        maxheight : 315
+        maxheight : 360
 
     @Matchers = [
         /(youtu\.be\/|youtube\.com\/(watch\?(.*&)?v=|(embed|v)\/))([^\?&"'>]+)/i,
